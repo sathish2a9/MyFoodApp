@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapasing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:layout_marginBottom="75dp"
+                    android:minHeight="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/food_img"
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                </ImageView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/colorSurface"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_restName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:text="Swagat Restaurant"
+                            android:textAppearance="?attr/textAppearanceHeadline5">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:id="@+id/tv_restTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@android:drawable/star_big_off"
+                            android:drawablePadding="2dp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_restName"
+                            app:layout_constraintStart_toStartOf="@+id/tv_restName"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_restName"
+                            android:maxLines="1"
+                            android:text="@string/resturant_timing"
+                            android:textAppearance="?attr/textAppearanceBody1">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:id="@+id/tv_restPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@android:drawable/stat_sys_phone_call"
+                            android:drawablePadding="1dp"
+                            android:drawableTint="@color/black_900"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_restTime"
+                            app:layout_constraintStart_toStartOf="@+id/tv_restTime"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_restTime"
+                            android:maxLines="1"
+                            android:text="@string/reach_us"
+                            android:textAppearance="?attr/textAppearanceBody1">
+
+                        </TextView>
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_restPhone"
+                            app:layout_constraintStart_toStartOf="@+id/tv_restPhone"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_restPhone"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/book_color"
+                            android:text="Book A Table">
+
+                        </com.google.android.material.button.MaterialButton>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/Widget.AppCompat.PopupMenu"
+                app:title="  ">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_heading"
+                style="@style/TextAppearance.MyTheme.Headline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:text="Starter">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+                app:layout_constraintStart_toStartOf="parent"
+                android:clipToPadding="false"
+                android:paddingTop="3dp"
+                android:paddingBottom="44dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/frame_add_to_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/book_color"
+        android:layout_gravity="bottom"
+        android:paddingVertical="14dp">
+
+        <TextView
+            android:id="@+id/add_to_cart"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white_50"
+            tools:text="@string/add_to_cart_4">
+
+        </TextView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

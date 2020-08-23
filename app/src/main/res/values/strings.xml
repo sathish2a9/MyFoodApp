@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Food App</string>
+    <string name="resturant_timing">5.0(200+0|All days : 09:00AM - 06:00 PM)</string>
+    <string name="reach_us">Reach us at : 985462142</string>
+    <string name="add_to_cart_4">View cart (%1$d items) </string>
+    <string name="place_order">Place Order </string>
+    <string name="cart_total">\u20ac %1$d</string>
+</resources>

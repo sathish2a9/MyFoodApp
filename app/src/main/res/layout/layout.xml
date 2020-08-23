@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:padding="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/book_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Add">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/add_temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/subtract_btn"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white_50"
+            android:gravity="end"
+            android:text="-"
+            app:backgroundTint="@color/white_50" />
+
+        <TextView
+            android:id="@+id/number_counter"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="24sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_btn"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:text="+"
+            app:backgroundTint="@color/white_50" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
